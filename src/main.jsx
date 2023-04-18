@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import ToDoList from "./components/ToDoList/ToDoList";
 import { RecoilRoot, useRecoilValue } from "recoil";
+import { ThemeProvider } from "@emotion/react";
+import { ColorModeProvider } from "@chakra-ui/react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <RecoilRoot>

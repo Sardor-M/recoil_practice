@@ -1,4 +1,6 @@
 import React from "react";
+import { useRecoilState } from "recoil";
+import { todoListState } from "../Recoil/todoListState";
 
 function ToDoItem({ item }) {
   const [toDoList, setToDoList] = useRecoilState(todoListState);
@@ -31,7 +33,7 @@ function ToDoItem({ item }) {
 
   return (
     <div>
-      <p>To-Do List Inputs</p>
+      <p>Edit Your To-Do-Lists</p>
       <input type="text" value={item.text} onChange={editItemText} />
       <input
         type="checkbox"
