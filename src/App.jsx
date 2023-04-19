@@ -1,11 +1,8 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import ToDoList from "./components/ToDoList/ToDoList";
 import { Route, Routes } from "react-router-dom";
-import styled, { ThemeConsumer, ThemeProvider } from "styled-components";
-import { ColorModeProvider, useColorMode } from "@chakra-ui/react";
+import styled from "styled-components";
 
 function App() {
   const [count, setCount] = useState(0);
