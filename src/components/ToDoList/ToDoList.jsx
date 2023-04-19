@@ -4,9 +4,10 @@ import ToDoItemCreator from "../ToDoItemCreator/ToDoItemCreator";
 import { todoListState } from "../Recoil/todoListState";
 import { useRecoilValue } from "recoil";
 import ToDoListFilter from "../ToDoListFilters/ToDoListFilter";
+import filteredToDoListState from "../ToDoListFilters/ToDoListFilter";
 
 function ToDoList() {
-  const todoList = useRecoilValue(todoListState);
+  const todoList = useRecoilValue(filteredToDoListState);
   // const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
