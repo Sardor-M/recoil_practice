@@ -1,7 +1,7 @@
 import React from "react";
 import toDoListStatsState from "./ToDoListStateSelector";
 
-function ToDoLisStats() {
+function ToDoListStats() {
   const { totalNum, totalCompletedNum, totalUncompletedNum, percentCompleted } =
     useRecoilValue(toDoListStatsState);
 
@@ -16,4 +16,4 @@ function ToDoLisStats() {
     </div>
   );
 }
-export default ToDoLisStats;
+export default ToDoListStats;

@@ -1,6 +1,23 @@
 import React from "react";
 
-const toDoListStatsState = {
+export const filteredToDoListState = selector({
+  key: "filteredTodoListState",
+  get: ({ get }) => {
+    const filter = get(todoListFilterState);
+    const list = get(todoListState);
+
+    switch (filter) {
+      case "Show Completed":
+        return list.filter((item) => item.isComplete);
+      case "Show Uncompleted":
+        return list.filter((item) => !item.isComplete);
+      default:
+        return list;
+    }
+  },
+});
+
+export const toDoListStatsState = {
   key: toDoListStats,
   get: ({ get }) => {
     const toDoList = get(toDoListState);
@@ -20,5 +37,3 @@ const toDoListStatsState = {
     };
   },
 };
-
-export default toDoListStatsState;
