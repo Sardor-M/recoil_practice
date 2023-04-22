@@ -1,4 +1,6 @@
 import React from "react";
+import { selector } from "recoil";
+import { todoListFilterState, todoListState } from "../Recoil/todoListState";
 
 export const filteredToDoListState = selector({
   key: "filteredTodoListState",
@@ -17,10 +19,10 @@ export const filteredToDoListState = selector({
   },
 });
 
-export const toDoListStatsState = {
-  key: toDoListStats,
+export const toDoListStatsState = selector({
+  key: "ToDoListStats",
   get: ({ get }) => {
-    const toDoList = get(toDoListState);
+    const toDoList = get(todoListState);
     const totalNum = toDoList.length;
     const totalCompletedNum = toDoList.filter(
       (item) => item.isCompleted
@@ -36,4 +38,4 @@ export const toDoListStatsState = {
       percentCompleted,
     };
   },
-};
+});

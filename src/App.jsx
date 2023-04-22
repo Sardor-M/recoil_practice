@@ -1,31 +1,30 @@
 import { useState } from "react";
 import "./App.css";
-import ToDoList from "./components/ToDoList/ToDoList";
 import { Route, Routes } from "react-router-dom";
-import styled from "styled-components";
+import { ToDoList } from "./components/ToDoList/ToDoList";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Wrapper>
+    <div id="root">
       <Routes>
         <Route path="/" element={<ToDoList />} />
       </Routes>
-    </Wrapper>
+    </div>
   );
 }
 
 export default App;
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 30vh;
-  background: ;
-  color: white;
-  font-family: sans-serif;
-  margin: 0;
-`;
+// const Wrapper = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   height: 30vh;
+//   background: ;
+//   color: white;
+//   font-family: sans-serif;
+//   margin: 0;
+// `;

@@ -1,13 +1,13 @@
 import React from "react";
-import ToDoItem from "../ToDoItem/ToDoItem";
-import ToDoItemCreator from "../ToDoItemCreator/ToDoItemCreator";
-import { todoListState } from "../Recoil/todoListState";
 import { useRecoilValue } from "recoil";
-import ToDoListFilters from "../ToDoListFilters/ToDoListFilters";
-import ToDoListStats from "../ToDoListStats/ToDoListStats";
+import { filteredToDoListState } from "../Selector/Selector";
+import { ToDoItem } from "../ToDoItem/ToDoItem";
+import { ToDoItemCreator } from "../ToDoItemCreator/ToDoItemCreator";
+import { ToDoListFilters } from "../ToDoListFilters/ToDoListFilters";
+import { ToDoListStats } from "../ToDoListStats/ToDoListStats";
 
-function ToDoList() {
-  const todoList = useRecoilValue(todoListState);
+export function ToDoList() {
+  const todoList = useRecoilValue(filteredToDoListState);
   // const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
@@ -20,5 +20,3 @@ function ToDoList() {
     </>
   );
 }
-
-export default ToDoList;

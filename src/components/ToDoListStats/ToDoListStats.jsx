@@ -1,19 +1,19 @@
-import React from "react";
-import toDoListStatsState from "./ToDoListStateSelector";
+import * as React from "react";
+import { useRecoilValue } from "recoil";
+import { toDoListStatsState } from "../Selector/Selector";
 
-function ToDoListStats() {
+export function ToDoListStats() {
   const { totalNum, totalCompletedNum, totalUncompletedNum, percentCompleted } =
     useRecoilValue(toDoListStatsState);
 
+  const formattedPercentCompleted = Math.round(percentCompleted * 100);
+
   return (
-    <div>
-      <ul>
-        <li>Total items: {totalNum}</li>
-        <li>Items completed: {totalCompletedNum}</li>
-        <li>Items not completed: {totalUncompletedNum}</li>
-        <li>Percent completed: {formattedPercentCompleted}</li>
-      </ul>
-    </div>
+    <ul>
+      <li>Total items: {totalNum}</li>
+      <li>Items completed: {totalCompletedNum}</li>
+      <li>Items not completed: {totalUncompletedNum}</li>
+      <li>Percent completed: {formattedPercentCompleted}</li>
+    </ul>
   );
 }
-export default ToDoListStats;

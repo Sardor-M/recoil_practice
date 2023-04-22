@@ -2,7 +2,7 @@ import React from "react";
 import { useSetRecoilState } from "recoil";
 import { todoListState } from "../Recoil/todoListState";
 
-function ToDoItemCreator() {
+export function ToDoItemCreator() {
   const [inputValue, setInputValue] = React.useState("");
   const setToDoList = useSetRecoilState(todoListState);
 
@@ -38,5 +38,3 @@ var id = 0;
 function getId() {
   return id++;
 }
-
-export default ToDoItemCreator;

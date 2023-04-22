@@ -8,5 +8,5 @@ export const todoListState = atom({
 
 export const todoListFilterState = atom({
   key: "TodoListFilter",
-  default: "Show All",
+  default: "Show all",
 });

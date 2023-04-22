@@ -2,7 +2,7 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import { todoListState } from "../Recoil/todoListState";
 
-function ToDoItem({ item }) {
+export function ToDoItem({ item }) {
   const [toDoList, setToDoList] = useRecoilState(todoListState);
   const index = toDoList.findIndex((listItem) => listItem === item);
 
@@ -44,5 +44,3 @@ function ToDoItem({ item }) {
     </div>
   );
 }
-
-export default ToDoItem;

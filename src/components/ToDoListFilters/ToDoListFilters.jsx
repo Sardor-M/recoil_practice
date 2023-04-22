@@ -2,7 +2,7 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import { todoListFilterState } from "../Recoil/todoListState";
 
-function ToDoListFilters() {
+export function ToDoListFilters() {
   const [filter, setFilter] = useRecoilState(todoListFilterState);
   const updateFilter = ({ target: { value } }) => {
     setFilter(value);
@@ -18,5 +18,3 @@ function ToDoListFilters() {
     </>
   );
 }
-
-export default ToDoListFilters;
