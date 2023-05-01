@@ -4,7 +4,7 @@
 
 > You can checkout the demo here:
 >
-> - [To-Do-List](https://recoil-todo-list.netlify.app/)
+> - [To-Do-List](https://aesthetic-manatee-e76369.netlify.app/)
 
 ## How to run the project locally
 
