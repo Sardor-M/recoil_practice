@@ -1,5 +1,10 @@
 import React from "react";
+import { ToDoListStats } from "../ToDoListStats/ToDoListStats";
 
 export const ToDoListTable = () => {
-  return <div>ToDoListTable</div>;
+  return <ToDoListStats />;
 };
+
+
+// Path: src/components/ToDoListTable/ToDoListTable.jsx
+
