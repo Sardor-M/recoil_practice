@@ -10,3 +10,8 @@ export const todoListFilterState = atom({
   key: "TodoListFilter",
   default: "Show all",
 });
+
+export const todoListTableState = atom({
+  key: "ToDoListTable",
+  default: [],
+})
